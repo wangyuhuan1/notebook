@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 伪元素:是我们自己用css生成的元素
+        不是向h1~h6,p,img这样已经预定义号的元素
+         */
+        .parent::before{
+            content: "前面";
+            display: block;
+        }
+        .parent::after{
+            content:"后面";
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        中间
+    </div>
+</body>
+</html>

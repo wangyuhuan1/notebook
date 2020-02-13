@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        div{
+            /* inline-block导航间隙的问题
+            解决方案:给父元素font-size:0
+             */
+            font-size: 0;
+            line-height: 50px;
+            background: pink;
+        }
+        a{
+            width:120px;
+            text-align: center;
+            display: inline-block;
+            color:#fff;
+            text-decoration: none;
+        }
+        a:nth-child(1){
+            background: blue;
+        }
+        a:nth-child(2){
+            background: red;
+        }
+        a:nth-child(3){
+            background: green;
+        }
+        div a{
+            font-size: 16px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">联系客服</a>
+        <a href="#">商城</a>
+        <a href="#">商品</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* bind,call,apply之间的区别
+        bind改变函数的上下文执行环境，不会马上执行
+        
+        而call和apply绑定的函数会马上执行
+        */
+        function go(name,age){
+            console.log(this.name+":"+this.age)
+            console.log(name)
+            console.log(age)
+        }
+        go("cheng",18)
+        var li={
+            name:"王思聪",
+            age:23
+        }
+        go.apply(li,["li",24])
+    </script>
+</body>
+</html>

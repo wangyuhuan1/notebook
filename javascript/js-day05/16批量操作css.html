@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test">hello world</p>
+    <script>
+        /* 
+        cssText  -->批量操作css 
+        length
+        getPropertyValue()
+        item() -->返回对应位置的css属性名
+        removeProperty()
+        setProperty
+        */
+        var test=document.getElementById("test");
+        test.style.cssText="color:red;background-color:#333"
+        console.log(test.style.getPropertyValue("color"))
+        console.log(test.style.item(0))
+        test.onclick=function(){
+            this.style.removeProperty("color")
+        }
+    </script>
+</body>
+</html>

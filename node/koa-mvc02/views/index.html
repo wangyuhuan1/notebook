@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <h2>首页</h2>
+    {{data}}
+    <div class="container">
+        {{each playlists}}
+        <div class="item">
+            <img src="{{$value.coverImgUrl}}" alt="">
+            <a href="/detail?id={{$value.id}}">{{$value.name.slice(0,8)+"..."}}</a>
+            <p class="creator">
+                <span>by</span>
+                <a href="">{{$value.creator.nickname.slice(0,6)+"..."}}</a>
+            </p>
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>

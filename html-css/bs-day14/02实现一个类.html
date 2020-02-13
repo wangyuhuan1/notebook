@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            /* 构造函数:构造一个对象的函数,就是实例化一个对象的时候,调用的函数 */
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayName(){
+                console.log(this.name)
+            }
+        }
+        /* 
+        new的作用
+        1.调用构造函数
+        2.实例化一个对象
+         */
+        var chen = new Person("陈文钊",18);
+        console.log(chen)
+        chen.sayName()
+    </script>
+
+</body>
+</html>

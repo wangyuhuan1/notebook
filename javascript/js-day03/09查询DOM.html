@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one">hello world</div>
+    <div class="one">hello world</div>
+    <div class="one">hello world</div>
+    <script>
+        /* 通过class获取的是HTMLCollection,html的集合，它长得像数组
+        length 获取集合的长度
+        可以通过下标去读取 */
+        var one=document.getElementsByClassName("one");
+        console.log(one)
+        console.log(Array.isArray(one))
+    </script>
+</body>
+</html>

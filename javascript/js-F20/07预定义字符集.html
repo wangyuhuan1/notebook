@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 预定义字符及：针对常用的备选字符集提供的简化符号 
+        [0-9] \d
+        [0-9a-zA-Z] \w
+        空格 \s
+        .  表示除换行符以外所有的字符
+        */
+        var reg=/\d/g;
+        var str="fdgaa45622"
+        var t="hello     world"
+        console.log(str.replace(reg,"**"))  //fdgaa**********
+        console.log(str.replace(/\w/g,"**"))  //********************
+        console.log(t.replace(/\s/g,"*"))  //hello*****world
+        console.log(t.replace(/./g,"*"))  //***************
+    </script>
+</body>
+</html>

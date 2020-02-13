@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0}
+        .parent{
+            width:381px;
+            height:289px;
+            border:1px solid #333;
+            position: relative;
+            overflow: hidden;
+            margin-top: 100px;
+        }
+        .cover{
+            width:381px;
+            height:289px;
+            background: rgba(83, 83, 83, 0.856);
+            position:absolute;
+            top:0;
+            left:0;
+            z-index: 100;
+            transform: rotate(90deg);
+            transform-origin: right bottom;
+            transition: all 1s;
+        }
+        .parent:hover .cover{
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <img src="images/item02.jpg" alt="">
+        <div class="cover"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj=[{name:"汪峰",age:10},{name:"赵雷",age:5},{name:"房东的猫",age:6}]
+        /* 1.["汪峰","赵雷","房东的猫"] */
+        /* 2.汪峰/赵雷/房东的猫 */
+        
+/*         var arr=[]
+            obj.forEach(item => {
+            let name=item.name
+            arr.push(name)
+        })
+        console.log(arr.join("/")) */
+        var newArr=obj.map(item=>{
+            return item.name
+        })
+        console.log(newArr.join("/"))
+    </script>
+</body>
+</html>

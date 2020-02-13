@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var url="https://douban-api.now.sh/v2/movie/top250";
+        axios.get(url).then(res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

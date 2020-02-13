@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4];
+/*         Array.from(arr,item=>{
+            console.log(item)
+        })  //遍历 */
+        var max=Math.max(1,2,3);  //不能传数组,要展开 ...arr
+        var min=Math.min(...arr);
+        console.log(max)  //获取最大值
+        console.log(min)
+    </script>
+</body>
+</html>

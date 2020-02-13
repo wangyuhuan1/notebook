@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <script>
+        function http(){
+            return new Promise((resolve,reject)=>{
+                $.ajax({
+                    url:"https://music.aityp.com/top/playlist/cat=华语",
+                    type:"get",
+                    success:res=>{
+                        resolve(res)
+                    },
+                    error:err=>{
+                        reject(err)
+                    }
+                })
+            })
+        }
+        http().then(res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

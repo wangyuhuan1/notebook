@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html标签的分类</title>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            background: red;
+        }
+        a{
+            width:100px;
+            height: 100px;
+            background: red;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        input{
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 块标签 
+        div,p,ul-li,dl-dt-dd,h1~h6
+        特点:1.独占一行 2.能够设置width,height
+        display:block
+     -->
+     <div>div</div>
+     <p>p</p>
+     <h1>H1</h1>
+     <!-- 
+         内联标签 a,span,i,em,strong
+         1.并排显示
+         2.不能设置width,height
+         3.不能设置margin-top,margin-bottom
+         display:inline
+      -->
+      <a href="#">a</a>
+      <span>span</span>
+      <i>i</i>
+      <em>em</em>
+      <strong>strong</strong>
+      <p>hello world</p>
+      <!-- 内联块 img,input,button
+        1.并排显示  2.能设置width,height
+        display:inline-block;
+     -->
+      <input type="text">
+      <button>确定</button>
+</body>
+</html>

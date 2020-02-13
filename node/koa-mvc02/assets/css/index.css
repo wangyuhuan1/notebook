@@ -1,0 +1,21 @@
+h2{
+    color:red;
+}
+.container{
+    width:750px;
+    padding:40px;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid #D3D3D3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item{
+    width:140px;
+    font-size: 14px;
+}
+img{
+    width:140px;
+    height:140px
+}

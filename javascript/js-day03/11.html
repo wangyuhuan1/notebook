@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="all">全选</button>
+    <br>
+    <button id="noAll">不选</button>
+    <br>
+    <button id="reverse">反选</button>
+    <br>
+    <input type="checkbox">篮球
+    <br>
+    <input type="checkbox">足球
+    <br>
+    <input type="checkbox">高尔夫
+    <br>
+    <input type="checkbox">橄榄球
+    <br>
+    <input type="checkbox">乒乓球
+    <br>
+    <script>
+        /* 有一个时间必然有一个结果 执行onclick，后面就有一个=function(){}*/
+        var all=document.getElementById("all");  //首先选中这个按钮
+        var noAll=document.getElementById("noAll")
+        var reverse=document.getElementById("reverse")
+        var inputs=document.getElementsByTagName("input");
+        all.onclick=function(){
+            for(var i=0;i<inputs.length;i++){
+                inputs[i].checked=true; //input输入框的每一项
+            }
+        }
+        noAll.onclick=function(){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+            for(var i=0;i<inputs.length;i++){
+                inputs[i].checked=false;
+            }
+        }
+        reverse.onclick=function(){
+            for(var i=0;i<inputs.length;i++){
+                // console.log(inputs[i].checked)
+                // inputs[i].checked=(inputs[i].checked==true)?false:true;
+                inputs[i].checked=!inputs[i].checked;
+            }
+        }
+    </script>
+</body>
+</html>

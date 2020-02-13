@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 只要在类的原型上设置了一个方法，那么所有的对象都拥有了这个方法 */
+        var arr =new Array(1,2,3);
+        Array.prototype.sayHello=function(){
+            console.log("hello")
+        }
+        var a=[4,5,6]
+        arr.push(4)
+        arr.sayHello()
+        a.sayHello()
+    </script>
+</body>
+</html>

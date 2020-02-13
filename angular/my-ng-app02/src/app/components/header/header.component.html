@@ -1,0 +1,4 @@
+<p>header works!</p>
+<input type="checkbox" [(ngModel)]="checked" (ngModelChange)="handleChange()">
+<p *ngFor="let item of cartList">{{item.productName}}</p>
+<button nz-button nzType="primary">Primary</button>

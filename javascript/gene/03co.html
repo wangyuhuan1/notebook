@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/co/4.1.0/index.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <script>
+        var baseUrl = "http://192.168.14.49:5000/"
+        function http(url) {
+            return $.ajax({
+                url: baseUrl + url,
+                dataType: "json"
+            })
+        }
+        co(function *(){
+            const data=yield http("top/playlist");
+            var {id,name}=data.playlists[0]
+            const detail=yield http(`playlist/detail?id=${id}`)
+            console.log(detail)
+        })
+    </script>
+</body>
+
+</html>

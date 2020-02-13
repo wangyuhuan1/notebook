@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var cities = [{ spell: "tianmen", city: "天门" }, { spell: "tianjin", city: "天津" }, { spell: "tianshui", city: "天水" }]
+
+        var arr = []
+        cities.forEach(item => {
+            if (item.spell.startsWith("tian") || item.city.startsWith("天")) {
+                arr.push(item.city)
+            }
+        })
+        console.log(arr)
+    </script>
+</body>
+
+</html>

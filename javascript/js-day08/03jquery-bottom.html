@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        *{margin:0;padding:0}
+        body{
+            height:2000px;
+            background: red
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var scrollHeight=$(document).height();
+        var clientHeight=$(window).innerHeight();
+        $(window).scroll(function(){
+            var scrollTop=$(document).scrollTop();
+            if(clientHeight+scrollTop==scrollHeight){
+                console.log("已经到达底部")
+            }else{
+                console.log("")
+            }
+            
+        })
+
+    </script>
+</body>
+</html>

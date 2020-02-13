@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function show(x){
+            return x;
+        }
+        /* 参数只要一个可以不用小括号，输出语句只有一行可以不用大括号 */
+        var go=x=>x;
+        var test=z=>console.log(z)
+
+        var gitInfo=(x,y)=>{
+            console.log(x);
+            console.log(x+y)
+        }
+        console.log(go(10))
+        test(20)
+    </script>
+</body>
+</html>

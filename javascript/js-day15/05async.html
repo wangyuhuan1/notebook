@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 在函数前面加上async可以将一个普通函数变为promise */
+        async function go(){
+            return 1
+        }
+        go().then(res=>{
+            console.log(res)
+        })
+        /* 
+        await关键字 1.只能在async函数中使用 2.后面只能是promise
+        作用：等待后面promise执行完毕才会执行后面的代码 */
+        async function getData(){
+            var data=await go();
+            console.log(data)
+        }
+        getData()
+    </script>
+</body>
+</html>

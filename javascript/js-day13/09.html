@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+        setInterval(function(){
+        var oDate=new Date();
+        var playTime=new Date("2019-09-19 09:00:00").getTime()
+        var mill=oDate.getTime();
+        var gapTime=playTime-mill;
+        var seconds=Math.floor(gapTime/1000)  //得到秒
+        var hours=Math.floor(seconds/3600)  //得到小时
+        seconds=seconds%3600;  //换算成小时剩余秒数
+        var minutes=Math.floor(seconds/60)  //得到分钟
+        seconds=seconds%60;   //换算成分钟剩余秒数
+        function transform(params){
+            return params<10?"0"+params:params;
+        }
+        var sum=transform(hours)+":"+transform(minutes)+":"+transform(seconds)
+        document.getElementById("p").innerHTML=sum;
+    },1000)
+    </script>
+</body>
+</html>

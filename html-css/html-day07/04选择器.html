@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* firt-child,last-child,nth-child应该场景是
+        父元素下的子元素,是同一个类型的元素
+         */
+         /* 如果父元素下的子元素,不是同一类型的元素
+         nth-of-type
+          */
+        .parent>button:nth-of-type(2){
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>hello world</p>
+        <button>btn</button>
+        <p>hello world</p>
+        <button>btn</button>
+        <p>hello world</p>
+        <button>btn</button>
+        <p>hello world</p>
+    </div>
+</body>
+</html>

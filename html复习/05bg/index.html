@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <style>
+        *{margin:0;padding:0}
+        .bg {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img.bg-img {
+            width: 500px;
+        }
+        img.main-img{
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <img @click="handleClick" class="main-img" src="images/aboutus_banner.jpg" alt="">
+            <div @click="handleBg" class="bg" v-if="isBg">
+                <img class="bg-img" src="images/aboutus_banner.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    isBg:false
+                }
+                methods:{
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

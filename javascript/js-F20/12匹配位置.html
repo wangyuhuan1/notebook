@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        ^  以什么开头 
+        $  以什么结尾
+        */
+        var str="       hello world";
+        var s="hello          ";
+        var t="    hello world    "
+        var reg=/^\s+/   //以空格开头一个或多个
+        console.log(str.replace(reg,"*"))  //*hello world
+        //以空格开头的一个或多个字符替换成*
+        var r=/\s+$/;
+        console.log(s.replace(r,"*"))  //hello*
+        //以空格结尾的一个或多个字符替换成*
+        console.log(t.replace(/^\s+|\s+$/g,"*"))  //*hello world*
+        //以空格开头和以空格结尾的一个或多个字符替换成*
+    </script>
+</body>
+</html>

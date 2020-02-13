@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <script>
+        /* 
+        onload 等DOM树以及图片相关资源加载完毕，再执行函数中的代码
+         */
+        window.onload=function(){
+            var input=document.getElementById("input")
+            input.onchange=function(event){
+                console.log(this.value)
+            }
+            // console.log("页面加载")
+        }
+    </script>
+</body>
+</html>

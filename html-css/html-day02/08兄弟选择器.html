@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兄弟选择器</title>
+    <style>
+        /* 选中one之后的第一个p元素 */
+        /* .one+p{
+            color:red;
+        } */
+        /* 选中one之后的所有p元素 */
+        .one~p{
+            color:red;
+        }
+        /* h1:hover{}伪类选择器 */
+        h1:hover{
+            color:red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 网页上可见的内容写在body里面 -->
+    <!-- input,img,br单标签,特殊 -->
+    <p class="one">hello world</>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+
+    <h1>h1</h1>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <script src="lib/http.js"></script>
+    <style>
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <div>
+        <img src="" alt=""> <br>
+        <audio src="" controls="controls" autoplay></audio>
+    </div>
+    <script>
+        $("input").keyup(function (event) {
+            if (event.keyCode == 13) {
+                var value = $(this).val()
+                // console.log(value)
+
+
+                /* 获取id */
+                http({
+                    url: `search?keywords=${value}`,
+                    callback: getId
+                })
+                function getId(res) {
+                    var id = res.result.songs[0].id;
+                    // console.log(id)
+                    /* 获取imgUrl */
+                    http({
+                        url: `song/detail?ids=${id}`,
+                        callback: getImgUrl
+                    })
+                    /* 获取musicUrl */
+                    http({
+                        url: `song/url?id=${id}`,
+                        callback: getMusicUrl
+                    })
+                }
+                function getImgUrl(res) {
+                    var imgUrl = res.songs[0].al.picUrl;
+                    $("img").attr("src", imgUrl)
+                    // console.log(getImgUrl)
+                }
+                function getMusicUrl(res) {
+                    var musicUrl = res.data[0].url;
+                    $("audio").attr("src", musicUrl)
+                    // console.log(musicUrl)
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

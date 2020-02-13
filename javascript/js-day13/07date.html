@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var oDate = new Date()
+        var year=oDate.getFullYear()
+        /* 月份0开始，和数组一样 */
+        var month=oDate.getMonth()
+        var date=oDate.getDate()
+        var hour=oDate.getHours()
+        var minute=oDate.getMinutes()
+        var second=oDate.getSeconds()
+        /* 获取毫秒 */
+        var mill=oDate.getTime()
+        /* 星期从0开始，0表示星期天 */
+        var day=oDate.getDay()
+        console.log(oDate)
+        console.log(year)
+        console.log(month+1)
+        console.log(date)
+        console.log(hour)
+        console.log(minute)
+        console.log(second)
+        console.log(mill)
+        console.log(day)
+    </script>
+</body>
+
+</html>

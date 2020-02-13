@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 回调函数：就是将函数作为参数传递给另外一个函数 
+        作用：可以获取函数内部的值*/
+        function http(callback){
+            var data={"name":"cheng",age:18};
+            callback(data);
+        }
+        function handleData(res){
+            console.log(res)
+        }
+        http(handleData);
+    </script>
+</body>
+</html>

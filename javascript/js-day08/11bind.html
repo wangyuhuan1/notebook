@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 改变函数内部的this关键字的指向 */
+        var name="cheng"
+        var obj={
+            name:"li"
+        }
+        var test=function(){
+            console.log(this.name)
+        }.bind(obj)  //bind改变函数内部this执行的上下文环境
+        test()
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 每一秒输出一个数字 0-3 -->
+    <script>
+        var a = 0;
+        function go() {
+            setTimeout(function () {
+                console.log(a);
+                a++;
+                if (a <= 3) {
+                    go();
+                }
+            }, 1000)
+        }
+        go();
+    </script>
+</body>
+
+</html>

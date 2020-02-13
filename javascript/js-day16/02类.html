@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* es6之前如何实例化一个类
+        使用构造函数实现一个类
+        构造函数：就是构造一个对象的函数 */
+        function Person(name,age){
+            this.name=name;
+            this.age=age
+        }
+        /* 使用new关键字去实例化对象 */
+        var liu=new Person("liu",18)
+        console.log(liu)
+        /* 在构造函数中 谁使用new关键字调用构造函数，this就指向谁 */
+        /* js的继承是基于原型的继承 */
+    </script>
+</body>
+</html>

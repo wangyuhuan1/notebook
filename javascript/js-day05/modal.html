@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            width: 400px;
+            vertical-align: bottom;
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 400px;
+            border: 1px solid #333;
+            padding: 20px;
+            position: relative
+        }
+
+        .modal {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 100;
+            background: #333;
+            opacity: .2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/4a68818befe4ec269bf52b6f6f6ccae6.jpg" alt="">
+        <div class="modal"></div>
+    </div>
+    <script>
+        /* 1.onmouseover  opacity每50毫秒增加2%，增加到80% 的时候停止动画 */
+        /* 2.onmouseout          每50毫秒减去2%，减到20%的时候停止动画 */
+        var container = document.getElementsByClassName("container")[0]
+        var modal = document.getElementsByClassName("modal")[0]
+        var opacity = getComputedStyle(modal).opacity * 100   //获取样式表中的样式
+        var timer = null;
+        container.onmouseover = function () {
+            clearInterval(timer);
+            timer = setInterval(function () {
+                if (opacity >= 80) {
+                    clearInterval(timer)
+                } else {
+                    opacity = opacity + 2;
+                    // console.log(opacity)
+                    modal.style.opacity=opacity/100
+                }
+            }, 50)
+        }
+        container.onmouseout=function(){
+            clearInterval(timer);
+            timer=setInterval(function(){
+                if(opacity<=20){
+                    clearInterval(timer)
+                }else{
+                    opacity=opacity-2;
+                    modal.style.opacity=opacity/100
+                }
+            },50)
+        }
+        /* if判断要写在setInterval里面，setInterval一直循环，if如果写外面就不会执行 */
+    </script>
+</body>
+
+</html>

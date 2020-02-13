@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <p>hello world</p>
+    <script>
+        // 操作DOM 一个网页就是由很多个DOM节点构成,通俗的理解,一个标签就是一个DOM节点
+        /* 
+        操作DOM是很消耗性能的
+         */
+        $("p").click(function(){
+            $(this).html("change")
+        })
+    </script>
+</body>
+</html>

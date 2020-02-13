@@ -1,0 +1,21 @@
+1.box-shdow:水平偏移 | 垂直偏移 | 高斯模糊 | 阴影尺寸 | 阴影颜色
+2.position:flex  left|right|top|bottom :0
+           el:"#app",
+            data(){
+                return {
+                    isBg:false
+                }
+                methods:{
+                    handleClick(){
+                        this.isBg=true
+                    },
+                    handleBg(){
+                        this.isBg=false
+                    }
+                    }
+3.img在div中的间隙问题
+<<<<<<< HEAD
+ftp://192.168.14.49/
+=======
+>>>>>>> da5d980d7781f68ecb3878b231edb4ac6a1de5f1
+   

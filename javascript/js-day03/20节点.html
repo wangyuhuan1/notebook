@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        ffsfd<p>hello world</p>
+    </div>
+    <script>
+        /* 
+        节点分为： 
+        元素节点 nodeType==1
+        属性节点 nodeType==2
+        文本节点 nodeType==3
+        */
+        /* 
+        firstChild  -->输出第一个节点 
+        firstElementChild -->输出第一个元素节点
+        */
+        var parent=document.getElementById("parent")
+        var tNode =parent.firstChild
+        var aNode=parent.getAttributeNode("id")
+        // console.log(parent.firstClass)
+        console.log(parent.firstElementChild)
+        console.log(parent.nodeType)
+        console.log(tNode.nodeType)
+        console.log(aNode.nodeType)
+    </script>
+</body>
+</html>

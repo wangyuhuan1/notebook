@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 为什么一个实例化的对象能够使用它原型上的方法 */
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        Person.prototype.sayName=function(){
+            console.log(this.name)
+        }
+        /* 
+        1.每个对象都有一个隐藏属性__proto__,它指向它的原型对象
+        2.这个对象会享有原型上的属性或者方法+ */
+        var wang=new Person("wang",18)
+        console.log(wang)
+        console.log(wang.__proto__)
+        console.log(wang.__proto__==Person.prototype)
+        console.log(wang.toString())
+    </script>
+</body>
+</html>

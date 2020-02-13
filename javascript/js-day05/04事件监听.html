@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent{
+            width:200px;
+            height:200px;
+            background: red;
+        }
+        #child{
+            width:100px;
+            height:100px;
+            background: yellow;
+            margin:50px
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+    <script>
+        /* onclick  --直接绑定的方式，只会触发一次 
+        事件监听  addEventListener(event)
+        */
+        var parent=document.getElementById("parent")
+        var child=document.getElementById("child")
+        child.addEventListener('click',function(){
+            console.log(1)
+        })
+        child.addEventListener('click',function(){
+            console.log(2)
+        })
+    </script>
+</body>
+</html>

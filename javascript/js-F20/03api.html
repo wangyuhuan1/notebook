@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* match,search,replace,split */
+        /* 正则表达式后面的为修饰符，i-->忽略大小写 g-->全局匹配 */
+        var p="hello worldL";
+        var reg=/l/ig;  /* g:global  i:ignore */
+        console.log(p.match('l'))  //["l", index: 2, input: "hello worldL", groups: undefined]
+        console.log(p.match(reg))  // ["l", "l", "l", "L"]
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+.navbar-brand {
+    width: 242px;
+    height: 80px;
+    background: url("../images/logo0.png") no-repeat center;
+}
+
+.navbar {
+    min-height: 80px;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+html body .navbar-nav>li>a {
+    line-height: 50px;
+
+}
+@media (max-width:768px){
+    .navbar-brand{
+        width:100px;
+        height: 80px;
+        background: url("../images/logo1.png") no-repeat center;
+    }
+    .navbar-toggle{
+        margin-top: 23px;
+    }
+}

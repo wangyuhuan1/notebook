@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function *gen(x){
+            yield x+2;
+            yield 7
+            return x
+        }
+        /* generator函数遇到yield关键字  函数会暂停 */
+        var g=gen(3) 
+        console.log(g.next())  //{value: 5, done: false}
+        console.log(g.next())  //{value: 3, done: true}
+        console.log(g.next()) 
+    </script>
+</body>
+</html>

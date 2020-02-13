@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li >html</li>
+        <li>css</li>
+        <li>javascript</li>
+    </ul>
+    <script>
+        var lis=document.getElementsByTagName("li")
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                /* 1.点击时首先让所有的li变成黑色 */
+                for(var j=0;j<lis.length;j++){
+                    lis[j].style.color="#333"
+                }
+                /* 2.让当前项变红色 */
+                this.style.color="red"
+            }
+        }
+    </script>
+</body>
+</html>

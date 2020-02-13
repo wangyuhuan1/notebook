@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <!-- 挂载点 -->
+    <div id="app">
+        <!-- 模板 -->
+        <p @click="handleClick">{{msg}}</p>
+    </div>
+    <script>
+        // 实例
+        new Vue({
+            el:"#app",
+            data:{
+                // data属性装载实例作用于挂载点的数据
+                msg:"hello world"
+            },
+            // methods 专门用于放置方法的
+            methods:{
+                handleClick(){
+                    this.msg = "change"
+                }
+            }
+        })
+    </script>
+</body>
+</html>

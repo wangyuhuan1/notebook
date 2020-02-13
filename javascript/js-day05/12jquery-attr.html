@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <p id="p" class="one">hello world</p>
+    <script>
+        /* attr
+        attr(attrName,value)  -->设置属性 
+        attr(attrName)  -->获取属性
+        attr(attrName)  -->移除属性
+        */
+        $("p").click(function(){
+            $(this).attr("id","good")
+            console.log($(this).attr("id"))
+            $(this).removeAttr("class")
+        })
+    </script>
+</body>
+</html>

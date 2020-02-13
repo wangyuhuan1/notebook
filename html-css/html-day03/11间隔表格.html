@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,td{
+            border:1px solid #333;
+        }
+        table{
+            width:700px;line-height: 50px;
+            border-collapse: collapse;
+        }
+        /* odd奇数  even偶数 */
+        /* tr:nth-child(even){
+            height:50px;
+        } */
+        /* 倍数选择器 */
+        tr:nth-child(2n+2){
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>手机</td>
+            <td>手机</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>手机</td>
+            <td>手机</td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <td>手机</td>
+            <td>手机</td>
+        </tr>
+    </table>
+</body>
+
+</html>

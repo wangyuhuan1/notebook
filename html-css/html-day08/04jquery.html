@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <p>hello world</p>
+    <p>hello world</p>
+    <script> 
+    // jquery支持所有的css选择器
+    $("p").click(function(){
+        // this指向执行事件的当前对象
+        $(this).hide(300)
+    })
+    </script>
+</body>
+</html>

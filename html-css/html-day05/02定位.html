@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent{
+            width:200px;
+            height: 200px;
+            background: red;
+            position: relative;
+            left: 100px;
+            top:100px;
+            
+        }
+        .child{
+            width:100px;
+            height: 100px;
+            position:absolute;
+            background: blue;
+            right:-10px;
+            bottom: 0;
+            /* position:absolute 的left,top它是相对于最近的给了定位的父元素 */
+            /* left,right,bottom,top */
+        }
+    </style>
+</head>
+<body>
+   <!-- position:absolute,relative,fixed -->
+   <!-- postition:relative 就是元素在页面上正常的位置,只不过是我们多了一种手段,left-top可以改变
+    元素的位置
+    left,top
+-->
+   <div class="parent">
+        <div class="child"></div>
+   </div>
+   <p>hello world</p>
+</body>
+</html>

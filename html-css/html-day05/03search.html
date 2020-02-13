@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0}
+        button{
+            position: absolute;
+            right:0;
+            top:0;
+            width:40px;
+            height:40px;
+            background: url('images/icon.png') no-repeat center;
+            border:none;
+            outline: none;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        .search{
+            overflow: hidden;
+            margin:100px;
+            width:240px;
+            height:40px;
+            background: #EEEEEE;
+            border:1px solid #666;
+            border-radius: 30px;
+            position: relative;
+        }
+        input{
+            /* left:20px; */
+            top:0px;
+            position: absolute;
+            padding-left: 20px;
+            border:none;
+            height: 40px;
+            background: #eee;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" placeholder="搜索">
+        <button></button>
+    </div>
+</body>
+</html>

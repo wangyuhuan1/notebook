@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <div id="test" style="display:block">hello world</div>
+    <button id="btn">切换</button>
+    <script>
+        var btn=document.getElementById("btn")
+        var test=document.getElementById("test")
+  /*       btn.onclick=function(){
+            var value=test.style.display;
+            // console.log(value)
+            if(value=="block"){
+                test.style.display="none"
+            }else{
+                test.style.display="block"
+            }
+        }
+ */
+        //用jquery写
+        $("#btn").click(function(){
+            /* is(":visible")判断一个元素是否显示 */
+            var isShow=$("#test").is(":visible")
+            if(isShow){
+                $("#test").hide(300)
+            }else{
+                $("#test").show(300)
+            }
+        })
+    </script>
+</body>
+</html>

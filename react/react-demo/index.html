@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name="zhangsan"   //window的方法
+        var obj={
+            name:"lisi"
+        }
+        var go=function(){
+            console.log(this.name)  
+        }
+        window.go()  //谁调用这个方法，this就指向谁
+        
+        var go=function(){
+            console.log(this.name)
+        }.bind(obj)
+        go()
+    </script>
+</body>
+</html>

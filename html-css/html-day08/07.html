@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <script>
+        $("p:first-child").css({color:"red",background:"blue",fontSize:"30px"})
+        // mouseover 鼠标悬停到元素上  mouseout  鼠标移除
+        // 链式操作
+        $("p:nth-child(2)").mouseover(function(){
+            $(this).css({color:"green"})
+        }).mouseout(function(){
+            $(this).css({color:"#333"})
+        })
+    </script>
+</body>
+</html>

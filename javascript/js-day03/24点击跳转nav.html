@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        .container>div{
+            height:800px;
+            margin-top: 30px;
+        }
+        .container>div:nth-child(1){
+            background: red;
+        }
+        .container>div:nth-child(2){
+            background: blue;
+        }
+        .container>div:nth-child(3){
+            background: yellow;
+        }
+        .container>div:nth-child(4){
+            background: green;
+        }
+        .nav{
+            position:fixed;
+            line-height: 50px;
+            background: #eee;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#html">html</a>
+        <a href="#css">css</a>
+        <a href="#js">javascript</a>
+        <a href="#vue">vue</a>
+    </div>
+    <div class="container">
+        <div id="html">html</div>
+        <div id="css">css</div>
+        <div id="js">javascript</div>
+        <div id="vue">vue</div>
+    </div>
+    <script>
+        /* obj.offset().top  获取元素距离顶部的距离
+        attr(param)    获取元素的属性 
+        $("html,body").animate({scroolTop:params*/
+        $(".nav a").click(function(){
+            /* 1.获取当前元素对应跳转的元素距离顶部的高度 */
+            var attr=$(this).attr("href");
+            var top=$(attr).offset().top
+            console.log(attr)
+            console.log(top)
+            $("html,body").animate({scrollTop:top})
+            return false;
+        })
+    </script>
+</body>
+</html>

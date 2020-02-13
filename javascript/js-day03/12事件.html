@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <style>
+        div:hover{
+            background: #333;
+        }
+    </style> -->
+</head>
+<body>
+    <div id="test">hello world</div>
+    <script>
+        /* 内容，样式，结构 */
+        /* 事件
+        onclick 点击事件
+        onmouseover
+        onmouseout
+         */
+        var test=document.getElementById("test");
+        test.onclick=function(){
+            // this在事件中指向正在执行事件的当前对象
+            this.style.color="red"   //更改颜色
+            /* innerHTML属性更改内容 */
+            this.innerHTML="change"
+        }
+        /* 鼠标悬停的事件 */
+        test.onmouseover=function(){
+            this.style.background="#333"
+        }
+        /* 鼠标移出的事件 */
+        test.onmouseout=function(){
+            this.style.background="#fff"
+        }
+    </script>
+</body>
+</html>

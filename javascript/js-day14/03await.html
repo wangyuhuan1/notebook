@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function go(){
+            return 1;
+        }
+        /* 2.await
+        执行一个promise
+        后面一定要跟promise
+        在async函数里面的
+         */
+        async function getRes(){
+            var data=await go()
+            console.log(data)
+        }
+        getRes()
+    </script>
+</body>
+</html>

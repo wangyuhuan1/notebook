@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="lib/base.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            width: 240px
+        }
+
+        .item {
+            border: 1px solid #eee;
+            padding: 20px;
+            float: left
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="item">
+            <img src="images/01.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/02.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/03.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/04.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/05.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/06.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/07.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/08.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/09.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/10.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/11.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/12.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        var url = {
+            dataUrl: [{
+                src: "01.jpg"
+            }, {
+                src: "02.jpg"
+            }, {
+                src: "03.jpg"
+            }, {
+                src: "04.jpg"
+            }, {
+                src: "05.jpg"
+            }, {
+                src: "06.jpg"
+            }, {
+                src: "07.jpg"
+            }, {
+                src: "08.jpg"
+            }, {
+                src: "09.jpg"
+            }, {
+                src: "10.jpg"
+            }, {
+                src: "11.jpg"
+            }, {
+                src: "12.jpg"
+            }]
+        }
+        /* 1.一排能放置几张图片 */
+        window.onload = function () {
+            place_img();
+            $(window).scroll(function(){
+                // console.log(onReachBottom())
+                if(onReachBottom()){
+                    url.dataUrl.forEach(item=>{
+                        // console.log(item)
+                        let list=`<div class="item"><img src="images/${item.src}" /></div>`
+                        $(".content").append(list);
+                        place_img()
+                    })
+                }
+            })
+        }
+
+        function place_img() {
+            var ww = $(window).width();
+            var itemWidth = $(".item").outerWidth()
+            console.log(itemWidth)
+            var num = Math.floor(ww / itemWidth)
+            console.log(num)
+            /* 2.将第一排的高度添加到一个数组中 */
+            var heightArr = [];
+            $(".item").each((index, item) => {
+                if (index < num) {
+                    var item = $(item).outerHeight()
+                    heightArr.push(item)
+                } else {
+                    /* 3.从数组高度最小的地方添加图片 */
+                    var minHeight = Math.min(...heightArr);  //最小高度
+                    // console.log(minHeight)
+                    var minIndex = heightArr.indexOf(minHeight);
+                    var offsetLeft = $(".item").eq(minIndex).offset().left;  //最小高度的item距离左边的偏移量
+                    $(".item").eq(index).css({ position: 'absolute', top: minHeight, left: offsetLeft })
+                }
+                /* 4.重新设置数组的最小高度 */
+                var height = $(".item").eq(index).outerHeight();
+                heightArr[minIndex] = minHeight + height;
+            })
+        }
+    </script>
+</body>
+
+</html>

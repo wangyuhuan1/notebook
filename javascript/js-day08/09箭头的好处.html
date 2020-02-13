@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">hello world</div>
+    <script>
+        /* 解决了函数内部this关键字的指向问题 */
+        var test=document.getElementById("test");
+        test.onclick=function(){
+            setTimeout(()=>{
+                console.log(this)
+            },300)
+        }
+/*         test.onclick=function(){
+            console.log(this)
+            go()
+        }
+        function go(){
+            console.log(this)
+        }
+        // test.onclick=go */
+    </script>
+</body>
+</html>

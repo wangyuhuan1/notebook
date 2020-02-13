@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display:none和visibility:hidden</title>
+    <style>
+        h4{
+            /* 从渲染树上将元素移除,但DOM树上元素依然存在 */
+            display: none;
+        }
+        h5{
+            /* 只能将元素隐藏 */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>display</h4>
+        <h5>visible</h5>
+    </div>
+</body>
+</html>

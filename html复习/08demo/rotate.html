@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background: red;
+            margin:100px;
+            animation:animate 2s infinite;
+            animation-play-state: paused
+        }
+        div:hover{
+            animation-play-state:running;
+        }
+        @keyframes animate{
+            0%{
+                transform:rotate(0deg)
+            }
+            50%{
+                transform: rotate(180deg)
+            }
+            100%{
+                transform:rotate(360deg)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

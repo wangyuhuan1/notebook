@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <style>
+        img{
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input">
+    <div>
+        <img src="" alt=""> <br>
+        <audio src="" controls="controls" autoplay></audio>
+    </div>
+    <script>
+        var url="https://music.aityp.com/";
+        var input=document.getElementById("input")
+        input.onkeydown=function(event){
+            if(event.keyCode==13){
+                console.log(this.value)
+                /* 1.获取id */
+                $.ajax({
+                    url:`${url}search?keywords=${this.value}`,
+                    type:'get',
+                    dataType:"json",
+                    success:res=>{
+                        var id=res.result.songs[0].id;
+                        // console.log(id)
+                        /* 2.获取imgUrl */
+                        $.ajax({
+                            url:`${url}song/detail?ids=${id}`,
+                            type:"get",
+                            dataType:"json",
+                            success:res=>{
+                                var imgUrl=res.songs[0].al.picUrl
+                                $("img").attr("src",imgUrl)
+                                // console.log(imgUrl)
+                            }
+                        })
+                        /* 3.获取音乐url */
+                        $.ajax({
+                            url:`${url}song/url?id=${id}`,
+                            type:"get",
+                            dataType:"json",
+                            success:res=>{
+                                var music=res.data[0].url
+                                $("audio").attr("src",music)
+                                // console.log(music)
+                            }
+                        })
+                    }
+                })
+            }
+        }
+    </script>
+</body>
+</html>

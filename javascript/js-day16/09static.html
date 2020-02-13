@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* static -->静态变量或静态方法
+        1.静态变量是不能被改变的
+        2.静态方法是不能被重写的
+        3.*静态方法直接通过类名调用 
+        4.静态方法中不能调用非静态的方法*/
+        class Person{
+            sayAge(){
+                console.log(18)
+            }
+            static sayName(){
+                this.sayAge()
+                console.log("hello")
+            }
+        }
+        var p=new Person();
+        Person.sayName()
+    </script>
+</body>
+</html>

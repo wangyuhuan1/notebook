@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 分解一个对象 */
+        var obj={name:"cheng",age:20}
+        var {age,sex}=obj;  //等于号两边的key值一定要是一样的
+        console.log(age)
+        function go({name,sex,age}){
+            console.log(sex)
+        }
+        go(obj)
+    </script>
+</body>
+</html>

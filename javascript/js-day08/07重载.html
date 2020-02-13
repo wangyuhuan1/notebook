@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 重载：根据传入参数不一样，动态决定调用哪一种方法 
+        原因：重复声明，覆盖掉了
+        */
+        function go(a,b){
+            console.log(a+b)
+        }
+        function go(a){
+            console.log(a)
+        }
+        function show(){
+            if(arguments.lengh==2){
+                console.log(arrgument[0]+arrgument[1])
+            }else if(arguments.lengh==1){
+                console.log(arguments[0])
+            }
+        }
+    </script>
+</body>
+</html>

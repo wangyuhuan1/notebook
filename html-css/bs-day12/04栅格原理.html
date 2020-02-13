@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .row::before {
+            content: "";
+            display: table;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        [class^="col"] {
+            float: left;
+            border: 1px solid #333;
+            height: 40px;
+        }
+
+        @media (min-width:992px) {
+            .col-md-12 {
+                width: 100%;
+            }
+
+            .col-md-11 {
+                width: 91.66666667%;
+            }
+
+            .col-md-10 {
+                width: 83.33333333%;
+            }
+
+            .col-md-9 {
+                width: 75%;
+            }
+
+            .col-md-8 {
+                width: 66.66666667%;
+            }
+
+            .col-md-7 {
+                width: 58.33333333%;
+            }
+
+            .col-md-6 {
+                width: 50%;
+            }
+
+            .col-md-5 {
+                width: 41.66666667%;
+            }
+
+            .col-md-4 {
+                width: 33.33333333%;
+            }
+
+            .col-md-3 {
+                width: 25%;
+            }
+
+            .col-md-2 {
+                width: 16.66666667%;
+            }
+
+            .col-md-1 {
+                width: 8.33333333%;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:992px) {
+            .col-sm-12 {
+                width: 100%;
+            }
+
+            .col-sm-11 {
+                width: 91.66666667%;
+            }
+
+            .col-sm-10 {
+                width: 83.33333333%;
+            }
+
+            .col-sm-9 {
+                width: 75%;
+            }
+
+            .col-sm-8 {
+                width: 66.66666667%;
+            }
+
+            .col-sm-7 {
+                width: 58.33333333%;
+            }
+
+            .col-sm-6 {
+                width: 50%;
+            }
+
+            .col-sm-5 {
+                width: 41.66666667%;
+            }
+
+            .col-sm-4 {
+                width: 33.33333333%;
+            }
+
+            .col-sm-3 {
+                width: 25%;
+            }
+
+            .col-sm-2 {
+                width: 16.66666667%;
+            }
+
+            .col-sm-1 {
+                width: 8.33333333%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+
+        </div>
+        <div class="col-md-4 col-sm-6">
+
+        </div>
+        <div class="col-md-4 col-sm-6">
+
+        </div>
+        <div class="col-md-4 col-sm-6">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

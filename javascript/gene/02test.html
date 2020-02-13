@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function *go(x){
+            var y=yield x+2;
+            console.log(y);
+            var z=yield y;
+            console.log(z);
+            return 4
+        }
+        var obj=go(3)
+        console.log(obj.next())
+        console.log(obj.next(7))
+        console.log(obj.next(8))  //传给上个值的执行结果
+        // async function go(x){
+        //     return x;
+        // } 
+        // async function show(){
+        //     var data=await go(3)
+        //     console.log(data)
+        // }
+        // show()
+    </script>
+</body>
+</html>

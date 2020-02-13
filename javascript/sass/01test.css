@@ -1,0 +1,14 @@
+/* mixin */
+.one {
+  width: 100px;
+  height: 100px;
+}
+/* 继承 */
+.block,
+.nav {
+  width: 200px;
+  height: 200px;
+}
+.nav {
+  border: 1px solid #333;
+}

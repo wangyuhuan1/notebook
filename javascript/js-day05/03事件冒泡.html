@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent{
+            width:200px;
+            height:200px;
+            background: red;
+        }
+        #child{
+            width:100px;
+            height:100px;
+            background: yellow;
+            margin:50px
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+    <script>
+        /* 事件冒泡：父元素和子元素绑定了相同的事件，
+        子元素的事件执行，父元素的事件也会触发 
+        
+        阻止事件冒泡：event.stopPropagation*/
+        var parent=document.getElementById("parent")
+        var child=document.getElementById("child")
+        parent.onclick=function(event){
+            alert("parent")
+            event.stopPropagation()
+        }
+        child.onclick=function(event){
+            alert('child')
+            event.stopPropagation()
+        }
+    </script>
+</body>
+</html>

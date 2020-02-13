@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        hello world
+        <p id="first">good</p>
+        <p>good</p>
+        <p>good</p>
+    </div>
+    <script>
+        /* 
+        childNodes  -->获取子节点 不会区分文本和元素节点
+        children  -->获取元素节点
+        nextSibling  -->获取下一个兄弟节点
+        nextElementSibling -->获取下个兄弟元素节点
+         */
+        var parent=document.getElementById("parent")
+        var childs=parent.children;
+        var child=parent.childNodes;
+        var first=document.getElementById("first")
+        console.log(childs)
+        console.log(child)
+        console.log(first.nextElementSibling)
+    </script>
+</body>
+</html>

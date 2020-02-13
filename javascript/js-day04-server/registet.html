@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        GET和post的区别
+        1.从可见性  get方式传递的参数,是跟着url地址后面  post传递的参数是不可见
+        2.安全性  
+        3.传递数据量大小 get有限制,post无限制
+     -->
+    <form action="http://localhost:8080/register" method="GET">
+        <p><input type="text" name="username" placeholder="请输入用户名"></p>
+        <p><input type="password" name="pwd" placeholder="请输入密码"></p>
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <span>小米9</span><button id="btn">删除</button>
+    </p>
+    <script>
+        var res=window.prompt("请输入你的姓名");
+        console.log(res)
+        var btn=document.getElementById("btn")
+        /* perentNode -->亲爸 */
+        // console.log(btn.parentNode)
+        btn.onclick=function(){
+            var isDelete=window.confirm("你确定删除吗");
+            if(isDelete){
+                btn.parentNode.style.display="none"
+            }
+        }
+    </script>
+</body>
+</html>

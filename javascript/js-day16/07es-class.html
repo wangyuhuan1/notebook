@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        1.class实现一个类
+        2.constructor关键字实现构造函数
+        3.类中的方法是写在原型上的
+        4.extends关键字能够实现继承
+        5.在子类的方法去调用父类的方法使用this就可以调用 */
+        /* 
+        1.es5构造函数--实现了类
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        2.new关键字实例化了对象
+        3.原型
+        4.原型链
+         */
+        class Person{
+            constructor(name,age){
+                this.name=name;
+                this.age=age
+            }
+            sayName(){
+                console.log(this.name)
+            }
+        }
+        class Student extends Person{
+            constructor(name,age,skill){
+                super(name,age);
+                this.skill=skill
+            }
+        }
+    </script>
+</body>
+</html>

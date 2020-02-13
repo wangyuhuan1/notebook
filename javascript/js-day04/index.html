@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="detail.html">detail</a>
+    <button id="btn">返回detail页面</button>
+    <script>
+        var btn=document.getElementById("btn");
+        btn.onclick=function(){
+            /* 返回历史记录的前一个页面 */
+            history.forward()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            height:40px;
+        }
+        /* pc min-width:992px */
+        @media (min-width:992px){
+            .container{
+                width:1170px;
+                background: red;
+            }
+        }
+        /* ipad  大于768px 小于992px*/
+        @media (min-width:768px) and (max-width:992px){
+            .container{
+                width:750px;
+                background: blue;
+            }
+        }
+        /* iphone 小于768px  */
+        @media (max-width:768px){
+            .container{
+                width:375px;
+                background: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        pc  1170px  bg  red
+        ipad 750px  bg blue
+        iphonhe 375px  bg green
+         @media screen
+     -->
+    <div class="container">
+
+    </div>
+</body>
+</html>

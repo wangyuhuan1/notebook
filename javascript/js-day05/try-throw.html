@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="btn">btn</button>
+    <p id="msg"></p>
+    <script>
+        /* try-catch-throw */
+        var btn=document.getElementById("btn")
+        var input =document.getElementById("input")
+        var msg=document.getElementById("msg")
+        btn.onclick=function(){
+            try{
+                var value=input.value;
+                if(value==""){
+                    /* throw可以自定义错误 */
+                    throw"输入的值不能为空"
+                }
+            }catch(err){
+                alert(err)
+            }
+        }
+    </script>
+</body>
+</html>

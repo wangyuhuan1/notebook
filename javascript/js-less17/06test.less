@@ -1,0 +1,45 @@
+/* 1.声明变量  @*/
+@import "color";
+@color:"#c20c0c";
+@width:0.5;
+/* 4.Maps */
+
+body{
+    @color:"#999";
+    background:@color;
+    color:#colors[primaryColor]
+}
+/* 2.mixin 一大段复用的代码   函数封装思想*/
+.wh(@w:100px,@h:100px){
+    width:@w;
+    height:@h
+}
+.three{
+    width:percentage(@width)
+}
+.one{
+    .wh();
+    /* 3.嵌套 本质上后代 */
+    &:hover{
+        color:red;
+        width:100px+100px
+    }
+    .child{
+        border:1px solid #333
+    }
+}
+.two{
+    .wh(200px,200px)
+}
+/* 5.继承 */
+.four:extend(.two){
+    border:1px solid #333
+}
+/* 6.循环 */
+.gen-col(@n) when(@n>0){
+    .col- @{n}{
+        width:100%/12*@n;
+    }
+    .gen-col(@n -1);
+}
+.gen-col(12);

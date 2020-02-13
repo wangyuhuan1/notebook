@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+/*         li:nth-child(odd){
+            color:red;
+        }
+        li:nth-child(even){
+            color:blue
+        } */
+    </style>
+</head>
+<body>
+    <!-- 偶数项 字体颜色为红色 奇数项字体颜色为蓝色 -->
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var lis=document.getElementsByTagName("li")
+        console.log(lis)
+        for(var i=0;i<lis.length;i++){   //1.对li进行遍历
+            if(i%2==0){                  //2.下标值取余%2 为零的情况为偶数
+                // console.log(lis[i])
+                lis[i].style.color="red"
+            }else{
+                lis[i].style.color="blue"
+            }
+        }
+    </script>
+</body>
+</html>

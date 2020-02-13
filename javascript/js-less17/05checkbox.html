@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{
+           width:200px;
+           height:200px ;
+           -webkit-appearance:none;  /* 让input框隐藏 */
+           outline:none;
+           border:none
+        }
+        input::after{
+            content:url("images/noselect.png")
+        }
+        input:checked:after{
+            content:url("images/select.png")
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox"><label>vue</label>
+</body>
+</html>

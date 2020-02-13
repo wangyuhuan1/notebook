@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>你还可以输入<em id="section">0</em>/150</p>
+    <textarea id="txt" cols="30" rows="10"></textarea>
+    <script>
+        var em=document.getElementById("section");
+        var txt=document.getElementById("txt");
+        txt.onkeyup=function(){
+            var length=this.value.length;
+            em.innerHTML=length;
+        }
+    </script>
+</body>
+</html>

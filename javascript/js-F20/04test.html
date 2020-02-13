@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var reg=/垃圾/g;
+        var p="它是垃圾，见到垃圾就要扔了";
+        var res=p.replace(reg,"**")
+        console.log(res)   //它是**，见到**就要扔了
+        console.log(p.match(reg))  //["垃圾", "垃圾"]
+    </script>
+</body>
+</html>

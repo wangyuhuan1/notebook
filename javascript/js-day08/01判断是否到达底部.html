@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/base.js"></script>
+    <style>
+        *{margin:0;padding:0}
+        body{
+            height:2000px;
+            background:red;
+        }
+        div{
+            height:1000px;
+            background:green
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+<!--     <script>
+        /* 获取滚动区域的高度 */
+        var scrollHeight=document.documentElement.scrollHeight; 
+        console.log(scrollHeight)
+        window.onscroll=function(){
+            var scrollTop=Math.ceil(document.documentElement.scrollTop);
+            var availHeight=document.documentElement.clientHeight;
+            console.log(scrollTop)
+            console.log(availHeight)
+            if(scrollTop+availHeight==scrollHeight){
+                console.log("到达底部")
+            }
+        }
+        /* 滚动区域的高度加可视区域的高度 */
+    </script> -->
+    <script>
+        window.onscroll=function(){
+            console.log(onReachBottom())
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* 1.声明变量  @*/
+/* 4.Maps */
+body {
+  background: "#999";
+  color: #337ab7;
+}
+/* 2.mixin 一大段复用的代码   函数封装思想*/
+.three {
+  width: 50%;
+}
+.one {
+  width: 100px;
+  height: 100px;
+  /* 3.嵌套 本质上后代 */
+}
+.one:hover {
+  color: red;
+  width: 200px;
+}
+.one .child {
+  border: 1px solid #333;
+}
+.two,
+.four {
+  width: 200px;
+  height: 200px;
+}
+/* 5.继承 */
+.four {
+  border: 1px solid #333;
+}
+/* 6.循环 */
+.col- 12 {
+  width: 100%;
+}

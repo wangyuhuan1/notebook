@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="name"></p>
+    <script>
+        /* ajax 从服务器上获取数据达到一种技术
+        1.创建ajax核心对象
+        2.与服务器建立连接
+        3.发送请求
+        4.响应 */
+        /* JSON.parse() json格式的字符串转换为Json对象 */
+        var url="https://www.easy-mock.com/mock/5d67436424fd60626abfe914/ajax/base";
+        var xhr=new XMLHttpRequest();
+        xhr.open('get',url,true)  //第三个参数表示是否异步 true
+        xhr.send()
+        xhr.onreadystatechange=function(){
+            // console.log(xhr.readyState)
+            if(xhr.readyState==4 && xhr.status==200){
+                var res=JSON.parse(xhr.responseText)
+                console.log(res.data.name)
+                var name=document.getElementById("name")
+                name.innerHTML=res.data.name
+            }
+        }
+    </script>
+</body>
+
+</html>

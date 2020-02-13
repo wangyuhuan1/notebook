@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            width:1240px;
+            height:400px;
+            border:1px solid #333;
+            margin:100px auto;
+            display:flex;
+        }
+        .container>div{
+            height:400px;
+            /* flex:1; */
+        }
+        /* 给子元素设置一样的flex值，他们会将父元素的width等分 */
+        .one{
+            flex:1;
+            background: red;
+        }
+        .two{
+            flex:2;
+            background:yellow;
+        }
+        .three{
+            flex:3;
+            background: green;
+        }
+        .four{
+            flex:4;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        [class^="col"]{
+            height: 40px;
+            border:1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        pc   4个  992px  width> 992px  col-md
+        ipad  3个      768px<width<992px  col-sm
+        iphone 2个     col-xs
+     -->
+    <div class="container">
+         <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+
+            </div>
+         </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

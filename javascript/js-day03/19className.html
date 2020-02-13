@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .current{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">hello world</div>
+    <script>
+        var test=document.getElementById("test");
+        // test.className="one"
+        test.onclick=function(){
+            if(this.classList.contains("current")){
+                this.className=""
+            }else{
+                this.className="current"
+            }
+        }
+    </script>
+</body>
+</html>

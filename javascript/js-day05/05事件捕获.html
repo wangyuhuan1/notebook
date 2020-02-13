@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent{
+            width:200px;
+            height:200px;
+            background: red;
+        }
+        #child{
+            width:100px;
+            height:100px;
+            background: yellow;
+            margin:50px
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+    <script>
+        /* 事件捕获：从不太具体的节点 最早接收事件，而最具体的节点 最后接收事件 */
+        /* onclick  --直接绑定的方式，只会触发一次 
+        addEventListener(event,function,boolean)
+        true -->事件捕获
+        false-->事件冒泡
+        */
+        var parent=document.getElementById("parent")
+        var child=document.getElementById("child")
+        child.addEventListener('click',function(){
+            alert("child")
+        },true)
+        parent.addEventListener('click',function(){
+            alert("parent")
+        },true)
+    </script>
+</body>
+</html>

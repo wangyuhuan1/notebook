@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name=referrer content=never>
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+    <script src="lib/http1.js"></script>
+    <style>
+        .container {
+            width: 788px;
+            height: 1440px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .content {
+            width: 150px;
+            height: 240px;
+            padding: 10px;
+            font-size: 14px;
+            box-shadow: 0 0 5px 3px rgba(51, 51, 51, .26);
+            margin-top: 20px;
+        }
+        .content img {
+            width: 150px;
+        }
+        .content p{
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <script>
+        http({
+            callback: handleData,
+        })
+        function handleData(res) {
+            var subjects = res.subjects;  //数据有很多，只取subjects这一个对象
+            // console.log(subjects);
+            var movies = [];    //定义一个数组movies
+            for (var i = 0; i < subjects.length; i++) {
+                var obj = {};                   //定义一个对象obj
+                obj.title = subjects[i].title;  //把取到的subjects对象的属性赋给新的对象obj
+                obj.imageUrl = subjects[i].images.small;
+                movies.push(obj)      //把obj添加到空数组movies里面
+            }
+            for (var j = 0; j < movies.length; j++) {
+                var item = $(`<div class="content"><img src="${movies[j].imageUrl}"/><p>${movies[j].title}</p></div>`)
+                $(".container").append(item)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

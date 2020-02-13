@@ -1,0 +1,20 @@
+{
+  "name": "koa-day16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "axios": "^0.19.0",
+    "koa": "^2.7.0",
+    "koa-art-template": "^1.1.1",
+    "koa-router": "^7.4.0"
+  }
+}

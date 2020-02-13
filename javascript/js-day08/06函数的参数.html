@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 函数传不定参
+        函数内部有个arguments对象，接收函数传递过来的参数
+        是一个类数组对象
+        */
+        function go(a,b,c){
+            console.log(a)
+            console.log(a+b)
+            console.log(a+b+c)
+        }
+        go(10,10,30,40)
+    </script>
+</body>
+</html>

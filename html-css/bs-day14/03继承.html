@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            sayName(){
+                console.log(this.name)
+            }
+        }
+        class Student extends Person{
+            constructor(name,age,school){
+                super(name,age);
+                this.school = school;
+            }
+        }
+        var wang = new Student("汪晶",18,"知行学院");
+        wang.sayName()
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Array,Object,Function */
+        /* 引用类型 
+        它会占据两块内存空间
+        */
+       /* 
+       1.引用类型是一个值，它保存在堆内存中 
+       2.包含引用类型的值的变量不是实际对象本身，它是一个指针，指向实际对象
+       3.在赋值运算中，赋值的其实是指针，
+       */
+        var arr=[1,2,3,4];
+        obj =arr;
+        obj.push(5);
+        console.log(arr)
+    </script>
+</body>
+</html>

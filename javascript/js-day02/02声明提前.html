@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 声明提前，变量提升 
+        javascript在执行代码的时候会将所有使用var声明的变量，放在作用域的顶部集中创建，
+        赋值留在原地
+        */
+
+        console.log(a);
+        var a=20;
+
+        go()
+        function go(){
+            console.log("hello world")
+        }
+    </script>
+</body>
+</html>

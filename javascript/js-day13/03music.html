@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .handle {
+            position: absolute;
+            left:37%;
+            transform: rotate(-30deg);
+            transform-origin: 60px 60px;
+        }
+        .container{
+            position: relative;
+            width:600px
+        }
+        .pan{
+            position:absolute;
+            top:200px;
+        }
+        @keyframes move{
+            0%{
+                transform:rotate(-30deg)
+            }
+            100%{
+                transform:rotate(0deg)
+            }
+        }
+        @keyframes unmove{
+            0%{
+                transform:rotate(0deg)
+            }
+            100%{
+                transform:rotate(-30deg)
+            }
+        }
+        .move{
+            animation:move 2s forwards;
+        }
+        .unmove{
+            animation:unmove 2s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="pan" src="images/pan.png" alt="">
+        <img class="handle" src="images/shou.png" alt="">
+    </div>
+    <script>
+        var isPlay=false;
+        $(".pan").click(function(){
+            isPlay=!isPlay;
+            console.log(isPlay)
+            if(isPlay){
+                $(".handle").addClass("move").removeClass("unmove")
+            }else{
+                $(".handle").removeClass("move").addClass("unmove")
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "nodemon": "^1.19.4",
+    "puppeteer": "^2.0.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "name": "sugar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

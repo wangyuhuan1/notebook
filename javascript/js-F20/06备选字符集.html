@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 连号的备选字符集 
+        [0-9]
+        [a-zA-Z]
+        [0-9a-zA-Z]
+        */
+        var str="32542546hiasghFAGJL";
+        var reg=/[0-9]/g
+        console.log(str.replace(reg,"*"))  //********hiasghFAGJL
+        console.log(str.replace(/[a-z]/ig,"*"))  //32542546***********
+        console.log(str.replace(/[0-9a-zA-Z]/ig,"*"))  //*******************
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 
+        1.给受到float影响的元素clear:both;
+        2.给他爹
+         */
+        .parent{
+            width:200px;
+            background:red;
+            overflow: hidden;
+        }
+        .two{
+            width:100px;
+            height: 100px;
+            background: blue;
+            float: left;
+        }
+        .three{
+            /* clear: both; */
+            width:300px;
+            height: 300px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="two">
+
+        </div>
+    </div>
+    <div class="three">
+         
+    </div>
+</body>
+</html>

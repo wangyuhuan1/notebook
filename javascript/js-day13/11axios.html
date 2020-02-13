@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.js"></script>
+</head>
+<body>
+    <script>
+
+        // var url="https://music.aityp.com/top/playlist?cat=华语";
+        // axios.get(url).then(res=>{
+        //     console.log(res)
+        // })
+
+        /* 
+        1.get ? params
+        2.post data */
+        axios({
+            method:"get",
+            url:"top/playlist",
+            params:{
+                cat:"华语"
+            },
+            baseURL:"https://music.aityp.com/"
+        }).then(res=>{
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.bg{
+    width:500rpx;
+    height: 500rpx;
+    border-radius: 50%;
+    animation: animate 6s linear infinite;
+}
+.pause{
+    animation-play-state: paused;
+}
+.running{
+    animation-play-state: running;
+}
+.container{
+    margin-top: 100rpx;
+    position: relative;
+    text-align: center;
+}
+.play{
+    width:150rpx;
+    height: 150rpx;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%)
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }
+    50%{
+        transform: rotate(180deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}

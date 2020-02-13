@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <p id="name"></p>
+    <script>
+        /* 
+        跨域
+        域名  
+        协议 主域名 子域名 端口号
+        javascript出于同源策略的限制,不允许一个域去访问另一个域的对象
+        如何跨域
+        客户端  
+        1.jsonp
+        服务器端跨域
+        Access-Control-Allow-Origin：*
+         */
+        var url = "http://localhost:8080/"
+        $.ajax({
+            url,
+            type:"get",
+            dataType:"json",
+            success:res=>{
+                var data = Object.values(res);
+                for(var i = 0;i<data.length;i++){
+                    var p  =document.createElement("p");
+                    p.innerHTML = data[i]
+                    document.body.append(p)
+                }
+            }
+        })
+        
+    </script>
+</body>
+
+</html>

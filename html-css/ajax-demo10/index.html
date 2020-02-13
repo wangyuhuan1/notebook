@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <h3 class="title"></h3>
+    <div>
+        <h4 class="nav"></h4>
+        <img src="">
+        <p class="content">
+            
+        </p>
+        <h4 class="sentence"></h4>
+        <ul>
+            <li class="sOne"></li>
+            <li class="sTwo"></li>
+            <li class="sThree"></li>
+        </ul>
+        <dl>
+            <dt></dt>
+            <dd></dd>
+        </dl>
+    </div>
+    <script>
+        // 1.在服务器端创建数据
+        var url = "https://www.easy-mock.com/mock/5d2fe50e6ea9d954634329de/demo/index";
+        $.ajax({
+            url,
+            dataType:"json",
+            // 2.从服务器获取数据 res
+            success:res=>{
+                var {title,nav,imageUrl,content,sentence,sOne,sTwo,sThree,dt,dd}= res.data;
+                // 3.将从服务器获取的数据渲染到页面上
+                $(".title").html(title)
+                $(".nav").html(nav)
+                $("img").attr("src",imageUrl)
+                $(".content").html(content)
+                $(".sentence").html(sentence)
+                $(".sOne").html(sOne)
+                $(".sTwo").html(sTwo)
+                $(".sThree").html(sThree)
+                $("dt").html(dt)
+                $("dd").html(dd)
+            }
+        })
+    </script>
+</body>
+
+</html>

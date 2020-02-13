@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <style>
+        p{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        手机号:<input type="text" v-model="keyword">
+        邮箱:<input type="text" v-model="email"><br>
+        <p v-show="isShow">请输入正确的手机号</p>
+        <button @click="handleClick">注册</button>
+    </div>
+    <script>
+        var vm=new Vue({
+            el:"#app",
+            data:{
+                keyword:"",
+                email:"",
+                isShow:false
+            },
+            methods:{
+                handleClick(){
+                    /* ^1[3-9]\d{9}$ */
+                    var reg=/^1[3-9]\d{9}$/
+                    var emailReg=/^[0-9a-z]+@[0-9a-z]+\.com$/
+                    if(!reg.test(this.keyword)){
+                        this.isShow=true
+                    }
+                    if(!emailReg.test(this.email)){
+                        alert("邮箱不合法")
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p><input type="text" placeholder="添加品牌" id="input"><button id="btn">添加</button></p>
+    <ul id="parent">
+        <li><span>小米</span><a href="">删除</a></li>
+        <li><span>苹果</span><a href="">删除</a></li>
+        <li><span>华为</span><a href="">删除</a></li>
+    </ul>
+    <script>
+        var parent=document.getElementById("parent");
+        var input=document.getElementById("input");
+        var btn=document.getElementById("btn")
+        btn.onclick=function(){
+            var value=input.value;
+            var li=document.createElement("li");
+            var span=document.createElement("span")
+            span.innerHTML=value
+            li.appendChild(span)
+            var a=document.createElement("a")
+            a.href="#"
+            a.innerHTML="删除"
+            li.appendChild(a);
+            parent.appendChild(li)
+            input.value=""
+        }
+        var deletes=document.getElementsByTagName("a");
+        for(var i=0;i<deletes.length;i++){
+            deletes[i].onclick=function(){
+                var parentNode=this.parentNode;
+                parentNode.style.display="none"
+                return false;  //阻止a的跳转
+            }
+        }
+    </script>
+</body>
+</html>

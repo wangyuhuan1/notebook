@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0}
+        .small-icons img{
+            width:116px;
+        }
+        .current{
+            border:2px solid red
+        }
+    </style>
+</head>
+<body>
+    <div class="small-icons">
+        <img src="images/01.png" alt="" class="current">
+        <img src="images/02.png" alt="">
+        <img src="images/03.png" alt="">
+        <img src="images/04.png" alt="">
+        <img src="images/05.png" alt="">
+    </div>
+    <div class="content">
+        <img src="images/01.png" alt="" class="current">
+    </div>
+    <script>
+        var icons=document.querySelectorAll(".small-icons>img");
+        var show=document.querySelectorAll(".content>img")[0];
+        //遍历的作用：是对每个图片都有个点击事件
+        for(let i=0;i<icons.length;i++){  
+            icons[i].index=i;
+            icons[i].onclick=function(){
+                for(let i=0;i<icons.length;i++){
+                    icons[i].classList.remove("current")
+                }
+                this.classList.add("current")
+                // console.log(this.index)
+                var index=this.index;
+                show.src=`images/0${index+1}.png`
+            }
+        }
+    </script>
+</body>
+</html>

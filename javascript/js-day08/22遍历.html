@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=['html','css','vue','react']
+/*         arr.forEach((item,index)=>{
+            console.log(item)
+            console.log(index)
+        }) */
+        //of
+/*         for(var value of arr){
+            console.log(value)
+        } */
+        // map
+        var newArray=arr.map((item,index)=>{
+            return item+"1"
+        })
+        console.log(newArray)
+    </script>
+</body>
+</html>

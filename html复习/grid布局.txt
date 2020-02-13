@@ -1,0 +1,37 @@
+1.display:grid /inline-grid
+ 
+2.行高     grid-template-columns:100px 100px 100px;
+  列宽     grid-template-rows:100px 100px 100px;  
+           grid-template-columns:repeat(3,100px);
+  自动填充 grid-template-columns:repeat(auto-fill,100px);
+
+3.minmax()函数  长度范围 minmax(100px,1fr):表示列宽不小于100px,不大于1fr
+  auto:自动长度
+ 
+4.两栏式布局
+  .wrapper{
+    display:grid;
+    grid-template-columns:70% 30%;
+  }
+   12网格布局
+   grid-template-columns:repeat(12,1fr);
+
+5.行间距 row-gap:20px;
+  列间距 column-gap:20px;
+         gap:20px 20px;
+
+6.grid-template-areas属性用于定义区域
+  grid-template-areas: 'a a a'
+                       'b b b'
+                       'c c c';
+  划分网格后 grid-auto-flow:row;(先行后列排序放)
+
+7.单元格内容的位置
+  水平位置（左中右）justify-items:start | end | center | stretch;
+  垂直位置（上中下）align-items: start | end | center | stretch;
+  简写  place-items:start end;
+
+8.单元格在容器的位置
+  水平  justify-content:start | end | center | stretch | space-around | space-between | space-evenly;
+  垂直  align-content:start | end | center | stretch | space-around | space-between | space-evenly;
+  简写  place-content:start end;

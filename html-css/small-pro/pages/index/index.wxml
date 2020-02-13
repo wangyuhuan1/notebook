@@ -1,0 +1,4 @@
+<view class="container">
+    <image class="bg {{isPlay?'running':'pause'}}" src="/images/bg.png"></image>
+    <image class="play" src="/images/pause.png" bind:tap="handleClick"></image>
+</view>

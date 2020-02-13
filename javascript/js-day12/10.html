@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="let's go home";
+        /* s'tel og emoh */
+        /* 1.将字符串分割为数组 */
+        /* ["let's","go","home"] */
+        /* 2.遍历使数组每一项分割为数组 */
+        /* [[l,e,t,',s],[g,o],[h,o,m,e]] */
+        /* 翻转数组 */
+        /* [[s,',t,e,l],[o,g],[e,m,o,h]] */
+        /* join */
+        /* ["s'tel","og ","emoh"] */
+        /* s'tel og emoh  */
+        var arr=str.split(" ");
+        var all=[]
+        arr.forEach(item=>{
+            let i=item.split("").reverse().join("")
+            all.push(i)
+        })
+        console.log(all.join(" "))
+    </script>
+</body>
+</html>

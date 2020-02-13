@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        // 只针对最后一次输入触发
+        var timer
+        var btn = document.getElementById("btn")
+        btn.onclick = function () {
+            // if(timer){
+            //     clearTimeout(timer)
+            // }
+            // timer= setTimeout(function () {
+            //     console.log(1)
+            // },1000)
+            dobounce(()=>{
+                console.log(1)
+            },1000)
+        }
+        function dobounce(fn,time){
+            if(timer){
+                clearTimeout(timer)
+            }
+            timer=setTimeout(fn,time)
+        }
+    </script>
+</body>
+
+</html>

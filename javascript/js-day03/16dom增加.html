@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <div id="good">good</div>
+    </div>
+    <script>
+        var parent=document.getElementById("parent");
+        var good=document.getElementById("good")
+        var p=document.createElement("p");
+        p.innerHTML="hello world";
+        // console.log(p)
+        /* appendChild() 给元素增加节点 */
+        parent.appendChild(p);
+        /* romoveChild() 从DOM树上移除一个元素 */
+        parent.removeChild(good);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0}
+        .nav{
+            width:1000px;
+            margin-left: auto;
+            margin-right: auto;
+            /* overflow: hidden; */
+            background: pink;
+        }
+        ul{
+            list-style: none;
+            line-height: 50px;
+        }
+        .drop-menu a{
+            display: block;
+        }
+        a{
+            text-decoration: none;
+            color:#fff;
+        }
+        /* core style */
+        li{
+            width:100px;
+            text-align: center;
+            float:left;
+        }
+        .drop-down{
+            position: relative;
+        }
+        .drop-menu{
+            background: deeppink;
+            /* core */
+            display: none;
+            position: absolute;
+            width:100px;
+        }
+        .row::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* core */
+        .drop-down:hover .drop-menu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav row">
+        <li class="drop-down">
+            <a href="#">收藏夹</a>
+            <div class="drop-menu">
+                <a href="#">收藏宝贝</a>
+                <a href="#">收藏店铺</a>
+            </div>
+        </li>
+        <li><a href="#">卖家中心</a></li>
+        <li><a href="#">联系客服</a></li>
+    </ul>
+</body>
+</html>

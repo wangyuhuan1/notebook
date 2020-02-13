@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0}
+        .all-icons{
+            text-align: center;
+            margin:50px auto;
+            width:400px; height: 50px;
+            border:1px solid #333;
+        }
+        .all-icons a{
+            position: relative;display: inline-block;
+            width:30px;height: 30px;background: #333;
+            border-radius: 50%;
+        }
+        .all-icons span{
+            position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);
+            display: inline-block;width:18px;height: 18px;
+            background: url('images/icons_type.png');
+        }
+        .all-icons .qq{
+            background-position-x: -19px;
+        }
+        .all-icons .weibo{
+            background-position-x: -38px;
+        }
+        .all-icons .pay{
+            width:26px;
+            background-position-x: -57px;
+        }
+        .all-icons .wechat{
+            width:23px;
+            background-position-x: -84px;
+        }
+        /* css sprites 雪碧图 */
+    </style>
+</head>
+<body>
+    <div class="all-icons">
+        <a href="#"><span class="qq"></span></a>
+        <a href="#"><span class="weibo"></span></a>
+        <a href="#"><span class="pay"></span></a>
+        <a href="#"><span class="wechat"></span></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var data = { name: "cheng",age:18,sex:'男'}
+        for(var key in data){
+            var p=document.createElement("p");
+            p.innerHTML=data[key];
+            document.body.append(p)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+/* mixin */
+#wh(){
+    width:100px;
+    height:100px
+}
+.one{
+    #wh()
+}
+/* 继承 */
+.block{
+    width:200px;
+    height:200px
+}
+.nav:extend(.block){
+    border:1px solid #333
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="kw" @keyup.enter="handleClick">
+    </div>
+    <script>
+        /* 身份证号匹配 */
+        var vm=new Vue({
+            el:"#app",
+            data(){
+                return {
+                    kw:""
+                }
+            },
+            methods:{
+                handleClick(){
+                    var reg=/^d{17}[0-9]+$/
+                    if(!reg.test(this.kw)){
+                        alert("身份证号输入错误")
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent:hover p{
+            color:red;
+        }
+        .parent>p:first-child{
+            color:yellow;
+        }
+        .parent>p:last-child{
+            color:blue;
+        }
+        .parent>p:nth-child(3n+3){
+            color:pink;
+        }
+        .parent>p:not(:nth-child(2)){
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1.class
+        2.id
+        3.后代选择器
+        4.兄弟选择器
+        5.后代  :firt-child :last-child  :nth-child(3n+3) :not()
+     -->
+     <div class="parent">
+         <p>hello world</p>
+         <p>hello world</p>
+         <p>hello world</p>
+         <p>hello world</p>
+         <p>hello world</p>
+         <p>hello world</p>
+         <p>hello world</p>
+     </div>
+</body>
+</html>

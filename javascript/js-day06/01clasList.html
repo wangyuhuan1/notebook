@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="p">hello world</p>
+    <button id="btn">addClass</button>
+    <button id="removeClass">removeClass</button>
+    <button id="toggle">toggleClass</button>
+    <button id="remove">remove</button>
+    <!-- classList 
+         add()
+         remove()
+         toggle()
+         contains()
+    -->
+    <script>
+        /* 点一下给p添加一个active属性 */
+        var btn=document.getElementById("btn")
+        var p=document.getElementById("p")
+        var remove=document.getElementById("removeClass")
+        var toggle=document.getElementById("toggle")
+        var removeElement=document.getElementById("remove")
+        btn.onclick=function(){
+            p.classList.add("active")
+        }
+        removeClass.onclick=function(){
+            p.classList.remove("active")
+        }
+        toggle.onclick=function(){
+            p.classList.toggle("active")
+        }
+        removeElement.onclick=function(){
+            p.remove()
+        }
+    </script>
+</body>
+</html>

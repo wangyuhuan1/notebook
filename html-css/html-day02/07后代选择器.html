@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 选中content的亲儿子 .content>p{} */
+        /* .content>p{
+            color:red;
+        } */
+        /* 选中content之后的所有p元素 */
+        .content p{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>hello world</p>
+        <ul>
+            <li><p>hello world</p></li>
+            <li><p>hello world</p></li>
+            <li><p>hello world</p></li>
+            <li><p>hello world</p></li>
+        </ul>
+        <p>hello world</p>
+    </div>
+</body>
+</html>
