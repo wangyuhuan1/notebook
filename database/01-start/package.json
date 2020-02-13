@@ -9,7 +9,7 @@
     "koa-art-template": "^1.1.1",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.6",
-    "mongoose": "^5.7.4"
+    "mongoose": "^5.7.5"
   },
   "scripts": {
     "start": "nodemon index.js"
